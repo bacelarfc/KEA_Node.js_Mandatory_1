@@ -1,0 +1,58 @@
+<main id="content" class="content">
+
+    <h1>Must-know node concepts</h1>
+    <h2>Modules</h2>
+    <p>In Node.js, every file is considered a module, which means that each module has its own scope and can export
+        variables, functions, and objects for use in other modules. However, not everything in Node.js is a module. For
+        example, the built-in modules and global objects provided by Node.js are not modules.</p>
+
+    <h3>EC6 vs CommonJS</h3>
+    <p>The import (ES6) feature, that allows modules to be imported in a more standardized and declarative way. Prior to
+        ES6, modules were typically imported using CommonJS-style require() statements.
+        In Node.js, the import statement can be used in place of the CommonJS-style require() statement when using
+        ECMAScript modules (ESM). ESM is a standardized format for defining and importing modules that is supported by
+        modern web browsers and Node.js versions 12 and above.
+    </p>
+    <h4>Here's an example of how to import a module using the import statement in Node.js:</h4>
+
+    <div class="code-block">
+        <pre><code class="language-javascript">// hello.js
+                export function hello(name) {
+                  console.log(`Hello, ${name}!`);
+                } </pre></code>
+
+        <div class="code-block">
+            <pre><code class="language-javascript">// app.js
+                        import { hello } from './hello.js';
+                        
+                        hello("Maria"); </pre></code>
+            <p>When a file is used as a module, it typically exports variables, functions, or objects that are made
+                available to other parts of the program using the module.exports object or the export keyword.</p>
+
+            <h2>Dependencies</h2>
+            <p>A module may have dependencies on other modules or packages. These dependencies are listed in a
+                package.json file and can be installed using npm.</p>
+
+            <p>A package is a collection of related modules that can be shared and installed via NPM. A package can be a
+                library, a framework, a tool, or an application. Packages are typically published to the NPM registry, a
+                public repository of over a million packages that can be easily installed using the npm install command.
+            </p>
+
+            <p>To install a package, simply run the npm install command followed by the name of the package. For
+                example, to install the popular express package:</p>
+
+            <h5>npm install express</h5>
+            <p>This command will install the express package and all of its dependencies in the node_modules directory.
+            </p>
+</main>
+
+<!-- ===== IONICONS ===== -->
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+<!-- ===== MAIN JS ===== -->
+<script src="./utils/js/checkForCaching.js"></script>
+<script src="./utils/js/sidebar.js"></script>
+<script src="utils/prism/prism.js"></script>
+
+</body>
+</html>

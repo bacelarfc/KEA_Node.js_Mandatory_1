@@ -1,0 +1,77 @@
+<main id="content" class="content">
+
+    <h1>Asynchronous programming</h1>
+    <p>Asynchronous programming allows developers to write code that runs smoothly and efficiently. In traditional
+        synchronous programming, your code executes line by line, and any task that takes a long time to complete will
+        block the execution of the rest of the code until it finishes.
+        Asynchronous programming solves this problem by allowing your code to continue running while it waits for
+        long-running tasks to complete. This means that your application can be more responsive, and you can avoid
+        blocking the main thread of your application.
+        There are several ways to write asynchronous code in JavaScript, including callback functions, Promises, and
+        Async/Await.</p>
+
+    <h4>See examples:</h4>
+
+    <h2>Callback Functions</h2>
+    <p>A callback function is a function that is passed as an argument to another function and is called back or
+        executed at a later time when some event occurs or when a particular condition is met.</p>
+    <div class="code-block">
+        <pre><code class="language-javascript">function sayHello() {
+    console.log('Hello!');
+}
+setTimeout(sayHello, 3000);
+  </pre></code>
+
+        <p>The setTimeout() function delays the execution of a function for a certain period of time. It takes two
+            arguments: the function to be executed and the delay time in milliseconds.</p>
+
+        <h2>Promises</h2>
+
+        <p>A Promise is an object that represents a value that may not be available yet. Promises have two states:
+            pending and settled. A Promise is settled when it is either fulfilled with a value or rejected with a reason
+            for failure.</p>
+
+        <div class="code-block">
+            <pre><code class="language-javascript">fetch("www.domain.com/something")
+        .then(response => response.json())
+        .then(data => console.log(data)); 
+</pre></code>
+            <p>In this example, the fetch() method returns a Promise that resolves with the response object. The first
+                then() method converts the response object to JSON using the json() method. The second then() method
+                handles the resolved Promise by logging the JSON data to the console. </p>
+
+            <h2>Async/Await</h2>
+            <p>Async/Await is a newer way of writing asynchronous code in JavaScript that provides an even cleaner
+                syntax compared to Promises. Async/Await allows you to write asynchronous code that looks like
+                synchronous code, making it easier to read and understand.</p>
+            <p>Async/Await is actually built on top of Promises, so you need to understand Promises before using
+                Async/Await. Promises are a way of representing a value that may not be available yet, and they provide
+                a way to handle asynchronous code in a more structured way. Async/Await makes working with Promises much
+                easier by allowing you to write asynchronous code that looks like synchronous code.</p>
+
+            <div class="code-block">
+                <pre><code class="language-javascript">async function fetchData() {
+    const response = await fetch('https://www.domain.com/something');
+    const data = await response.json();
+    console.log(data);
+}      
+    </pre></code>
+                <p>In this example, the fetchData() function is defined as an async function. Inside the function, we
+                    use the await keyword to wait for the result of the fetch() method, which returns a Promise. Once
+                    the Promise is resolved, we assign the result to the response variable. We then use the await
+                    keyword again to wait for the result of the json() method, which also returns a Promise. Once the
+                    second Promise is resolved, we assign the result to the data variable. Finally, we log the data
+                    variable to the console.
+                </p>
+</main>
+
+<!-- ===== IONICONS ===== -->
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+<!-- ===== MAIN JS ===== -->
+<script src="./utils/js/checkForCaching.js"></script>
+<script src="./utils/js/sidebar.js"></script>
+<script src="utils/prism/prism.js"></script>
+
+</body>
+</html>

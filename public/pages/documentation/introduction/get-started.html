@@ -1,0 +1,66 @@
+<main id="content" class="content"></main>
+<h1>Get started with Node.js and Express</h1>
+<h3>Express:</h3>
+<p>Express is a popular web framework for Node.js. It provides a set of tools and features for handling HTTP requests
+    and responses, routing, middleware, and more.
+</p>
+
+<p>To start a Node.js project with Express, you'll need to follow these steps:</p>
+
+<h5>Install Node.js:</h5>
+<p>You can download and install Node.js from the official website: <a href="https://nodejs.org">https://nodejs.org</a>
+    <br>
+</p>
+
+<p>Create a new project in Visual Studio.</p>
+<p>Create a new JavaScript file: Create a new file called app.js in your project directory.</p>
+<p>Initialize the project: Use the npm init command to create a new package.json file for your project. The package.json
+    file will contain information about your project, including its name, version, dependencies, and more. Run the
+    following command:</p>
+
+<h5>npm init</h5>
+
+<p>A new file (package.json) should have been added to your project directory. We will use the file to add external code
+    (module) to the project.
+
+    Add the following line before the closing curly brace (}) to enable ES6 import:
+
+    "type": "module"</p>
+
+<p>Install Express: Use the npm install express command to install Express as a dependency of your project:</p>
+
+<h5>npm install express</h5>
+
+<h4>Set up your first server in your app.js file:</h4>
+
+<div class="code-block">
+    <pre><code class="language-javascript">import express from 'express';
+        const app = express();
+        
+        const PORT = 8080;
+        
+        app.get("/"", (req, res) => {
+            res.send("Hello World!");
+        });
+              
+        app.listen(PORT, (error) => {
+             if (error) {
+                 console.log(error);
+                   return;
+                }
+         console.log("Server is running on port", PORT);
+});      
+</pre></code>
+
+</main>
+
+<!-- ===== IONICONS ===== -->
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+<!-- ===== MAIN JS ===== -->
+<script src="./utils/js/checkForCaching.js"></script>
+<script src="./utils/js/sidebar.js"></script>
+<script src="utils/prism/prism.js"></script>
+
+</body>
+</html>

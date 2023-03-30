@@ -1,0 +1,34 @@
+<main id="content" class="content">
+
+  <h1>Global Variables: let and var</h1>
+  <h4>Why you should avoid it:</h4>
+  <h5>Let</h5>
+  <div class="code-block">
+    <pre><code class="language-javascript">let globalVariable = "I am a global variable";
+function myFunction() {
+let globalVariable = "I am a local variable";
+console.log(globalVariable); // Output: "I am a local variable"
+myFunction();
+console.log(globalVariable); // Output: "I am a global variable"
+</pre></code>
+    <h5>Var</h5>
+    <div class="code-block">
+      <pre><code class="language-javascript">var x = 10;
+function myFunction() {
+var x = 20;
+console.log(x); }
+myFunction(); // Output: 20
+console.log(x); // Output: 10</pre></code>
+
+</main>
+
+<!-- ===== IONICONS ===== -->
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+<!-- ===== MAIN JS ===== -->
+<script src="./utils/js/checkForCaching.js"></script>
+<script src="./utils/js/sidebar.js"></script>
+<script src="utils/prism/prism.js"></script>
+
+</body>
+</html>

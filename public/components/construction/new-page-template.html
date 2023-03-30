@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./utils/prism/prism.css">
+    <link rel="stylesheet" href="./utils/css/start.css">$CSS_LINK
+    <title>$TAB_TITLE</title>
+</head>
+<body id="body-pd">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                    <a href="#" class="nav__logo"></a>
+                </div>
+                <div class="nav__list">
+                    <a href="/home" class="nav__link active">
+                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Dashboard</span>
+</a>
+<a href="/create-documentation" class="nav__link">
+    <ion-icon name="document-text-outline" class="nav__icon"></ion-icon>
+    <span class="nav__name">Create</span>
+</a>
+<div class="nav__link collapse">
+    <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+    <span class="nav__name">Documentation</span>
+    <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+    <ul class="collapse__menu">
+        <li class="collapse">
+            <a href="/introduction" class="collapse__sublink">Introduction</a>
+
+            <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+            <ul class="collapse__submenu">
+                <li><a href="/get-started" class="collapse__sublink">Get started</a></li>
+                <li><a href="/node-concepts" class="collapse__sublink">Concepts</a></li>
+                <li><a href="/server-side-rendering" class="collapse__sublink">Server-side rendering</a></li>
+        </li>
+        </ul>
+        <li class="collapse">
+            <a href="/js-fundamentals" class="collapse__sublink">Javascript Fundamentals</a>
+            <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+            <ul class="collapse__submenu">
+                <li><a href="/variables" class="collapse__sublink">Variables</a></li>
+                <li><a href="/async-programming" class="collapse__sublink">Asynchronous programming</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/get-started" class="collapse__sublink">Get started</a>
+        </li>
+    </ul>
+</div>
+
+<li>
+    <a href="/create-page" class="collapse__sublink">Create page</a>
+</li>
+            <a href="/logout" class="nav__link">
+                <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+                <span class="nav__name">Log Out</span>
+            </a>
+        </nav>
+    </div>  
+    <main id="content" class="content">
+    $CONTENT
